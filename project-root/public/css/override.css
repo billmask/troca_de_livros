@@ -1,0 +1,48 @@
+.olaUser {
+    font-size: 12 px;
+    color: #696969;
+    float: right;
+    padding-left: 25 px;
+}
+
+@media (max-width: 600px) {
+    .item-animal div {
+        display: block !important;
+    }
+    .lista-animais {
+        margin-top: 30px;
+    }
+}
+
+header.masthead .masthead-subheading {
+    font-size: 1.25 rem;
+    font-style: italic;
+    line-height: 2.25 rem;
+    margin-bottom: 2 rem;
+}
+
+header.masthead .masthead-heading {
+    font-size: 3.5 rem;
+    font-weight: 400;
+    line-height: 4.5 rem;
+    margin-bottom: 4 rem;
+}
+
+.form-control {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.375 rem 0.75 rem !important;
+    font-size: 1 rem !important;
+    font-weight: 400 !important;
+    line-height: 2.5 !important;
+    color: #212529 !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 1 px solid #ced4da !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-radius: 0.25 rem !important;
+    transition: border-color 0.15 s ease-in-out, box-shadow 0.15 s ease-in-out !important;
+    margin-bottom: 10px !important;
+}
