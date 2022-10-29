@@ -19,7 +19,7 @@
             Minha conta
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="<?= base_url('auth/logout'); ?>">Sair</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="<?= base_url('auth/logout'); ?>">Sair</a></li>
           </ul>
         </li>
       </ul>
@@ -31,7 +31,7 @@
             Minha conta
           </a>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="<?= base_url('auth/logout'); ?>">Sair</a></li>
+            <li class="nav-item"><a class=" dropdown-item" href="<?= base_url('auth/logout'); ?>">Sair</a></li>
           </ul>
         </li>
       </ul>
