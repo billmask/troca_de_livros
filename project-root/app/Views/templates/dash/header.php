@@ -19,6 +19,7 @@
             Minha conta
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="<?= base_url('auth/logout'); ?>">Sair</a></li>
           </ul>
         </li>
       </ul>
