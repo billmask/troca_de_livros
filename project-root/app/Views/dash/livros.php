@@ -94,54 +94,56 @@
     if (!$info_livros) {
         echo '<p>Nenhum livro adicionado.</p>';
     } else { ?>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Autor</th>
-                    <th scope="col">Editora</th>
-                    <th scope="col">Edição</th>
-                    <th scope="col">Tema</th>
-                    <th scope="col">Ano</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($info_livros as $livro) { ?>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead>
                     <tr>
-                        <td>
-                            <?= $livro['url_img'] ? '<img width=50 class="img-fluid"src="' . $livro['url_img'] . '"/>' : ''; ?>
-                            <?= $livro['nome']; ?>
-                        </td>
-                        <td>
-                            <?= $livro['autor']; ?>
-                        </td>
-                        <td>
-                            <?= $livro['editora']; ?>
-                        </td>
-                        <td>
-                            <?= $livro['edicao']; ?>
-                        </td>
-                        <td>
-                            <?= $livro['tema']; ?>
-                        </td>
-                        <td>
-                            <?= $livro['ano']; ?>
-                        </td>
-                        <td>
-                            <?= $livro['novo'] == 1 ? 'Usado' : 'Novo'; ?>
-                        </td>
-                        <td>
-                            <form class="" action="<?= base_url('livros/excluir'); ?>" method="POST">
-                                <input type="hidden" name="id_livro" value="<?= $livro['id']; ?>">
-                                <input type="submit" value="Excluir" class="btn btn-warning" style="margin-bottom: 10px;">
-                            </form>
-                        </td>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Editora</th>
+                        <th scope="col">Edição</th>
+                        <th scope="col">Tema</th>
+                        <th scope="col">Ano</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Ação</th>
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php foreach ($info_livros as $livro) { ?>
+                        <tr>
+                            <td>
+                                <?= $livro['url_img'] ? '<img width=50 class="img-fluid"src="' . $livro['url_img'] . '"/>' : ''; ?>
+                                <?= $livro['nome']; ?>
+                            </td>
+                            <td>
+                                <?= $livro['autor']; ?>
+                            </td>
+                            <td>
+                                <?= $livro['editora']; ?>
+                            </td>
+                            <td>
+                                <?= $livro['edicao']; ?>
+                            </td>
+                            <td>
+                                <?= $livro['tema']; ?>
+                            </td>
+                            <td>
+                                <?= $livro['ano']; ?>
+                            </td>
+                            <td>
+                                <?= $livro['novo'] == 1 ? 'Usado' : 'Novo'; ?>
+                            </td>
+                            <td>
+                                <form class="" action="<?= base_url('livros/excluir'); ?>" method="POST">
+                                    <input type="hidden" name="id_livro" value="<?= $livro['id']; ?>">
+                                    <input type="submit" value="Excluir" class="btn btn-warning" style="margin-bottom: 10px;">
+                                </form>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
     <?php } ?>
 </section>
 
