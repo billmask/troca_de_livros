@@ -10,13 +10,6 @@
           <a class="nav-link text-white" aria-current="page" href="<?= base_url('livros'); ?>">Livros</a>
         </li>
       </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown d-block d-sm-none">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Minha conta
-          </a>
-        </li>
-      </ul>
     </div>
     <div class="nav-item d-flex">
       <ul class="nav">
