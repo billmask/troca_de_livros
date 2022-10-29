@@ -1,4 +1,4 @@
-<section class="content-section-registration col-12 m-3 d-flex aligns-items-center justify-content-center">
+<section class="content-section-registration col-12 mt-3 d-flex aligns-items-center justify-content-center">
     <div class="content-form-registration col-md-5 p-3 border rounded-3 align-self-center bg-white">
         <h1 class="text-center">Registro</h1>
         <div class="spacing-30"></div>
