@@ -35,7 +35,8 @@
                                         <p class="mb-1"><strong>Doador:</strong> <?= $livro['nome_usuario']; ?></p>
                                         <p class="mb-1"><strong>Local para buscar livro: </strong><?= $livro['cidade']; ?>-<?= $livro['estado']; ?></p>
                                     </div>
-                                    <div class="botao d-flex align-items-end">
+                                    <div class="botao d-flex align-items-end flex-column">
+                                        <p><strong><?= $livro['tema']; ?></strong></p>
                                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#livro-<?= $livro['id']; ?>">
                                             Entrar em contato
                                         </button>
