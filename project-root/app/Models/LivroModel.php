@@ -9,7 +9,7 @@ class LivroModel extends Model
 
   protected $table = 'livros';
   protected $primayKey = 'id';
-  protected $allowedFields = ['nome', 'editora', 'tema', 'autor', 'edicao', 'id_usuario', 'novo', 'ano', 'url_img'];
+  protected $allowedFields = ['nome', 'editora', 'tema', 'autor', 'edicao', 'id_usuario', 'novo', 'ano', 'url_img', 'tipo'];
 
   public function getLivros()
   {
@@ -23,6 +23,14 @@ class LivroModel extends Model
   {
     $db = db_connect();
     $sql = 'SELECT l.*, u.nome as nome_usuario, u.cidade, u.estado, u.id as id_usuario FROM livros l INNER JOIN usuarios u ON u.id = l.id_usuario';
+    $resultado = $db->query($sql);
+    return $resultado->getResultArray();
+  }
+
+  public function search($search)
+  {
+    $db = db_connect();
+    $sql = "SELECT l.*, u.nome as nome_usuario, u.cidade, u.estado, u.id as id_usuario FROM livros l INNER JOIN usuarios u ON u.id = l.id_usuario WHERE l.nome LIKE CONCAT('$search', '%')";
     $resultado = $db->query($sql);
     return $resultado->getResultArray();
   }

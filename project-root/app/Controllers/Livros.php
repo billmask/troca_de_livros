@@ -22,7 +22,12 @@ class Livros extends BaseController
     }
 
     $livroModel = new \App\Models\LivroModel();
-    $info_livros = $livroModel->getLivrosDisponiveis();
+
+    if (isset($_GET['buscar'])) {
+      $info_livros = $livroModel->search($_GET['buscar']);
+    } else {
+      $info_livros = $livroModel->getLivrosDisponiveis();
+    }
 
     $data = [
       'title' => 'Livros para doação',
@@ -49,6 +54,7 @@ class Livros extends BaseController
     $edicao = $this->request->getPost('edicao');
     $ano = $this->request->getPost('ano');
     $tema = $this->request->getPost('tema');
+    $tipo = $this->request->getPost('tipo');
     $estado = $this->request->getPost('estado');
     $img = $this->request->getFile('img');
     $id_usuario = $id_usuario_logado;
@@ -69,6 +75,7 @@ class Livros extends BaseController
       'estado' => $estado,
       'url_img' => $img_url,
       'id_usuario' => $id_usuario,
+      'tipo' => $tipo
     ];
 
     $livroModel = new \App\Models\LivroModel();
