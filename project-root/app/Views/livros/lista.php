@@ -16,6 +16,7 @@
             echo '<p>Nenhum livro disponível para doação.</p>';
         } else {
         ?>
+            <?php if (isset($_GET['buscar'])) echo "<h3>Pesquisa para <strong>" . $_GET['buscar'] . "</strong></h3>"; ?>
             <?php foreach ($livros as $livro) { ?>
                 <li class="list-group-item list-group-item-action flex-column align-items-start p-3 item-animal">
                     <div class="d-flex">
