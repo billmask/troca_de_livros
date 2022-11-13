@@ -17,3 +17,4 @@ application/logs/*
 /vendor/
 
 /project-root/public/.htaccess
+/project-root/app/Config/Database.php
