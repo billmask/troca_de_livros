@@ -40,6 +40,16 @@ $routes->get('/', 'Home::index');
 $routes->get('/livros', 'Livros::index');
 $routes->post('/salva-contato', 'Mensagens::salvar');
 
+$routes->get('LivrosApi/new',             'LivrosApi::new');
+$routes->post('LivrosApi',                'LivrosApi::create');
+$routes->get('LivrosApi',                 'LivrosApi::index');
+$routes->get('LivrosApi/(:segment)',      'LivrosApi::show/$1');
+$routes->get('LivrosApi/(:segment)/edit', 'LivrosApi::edit/$1');
+$routes->put('LivrosApi/(:segment)',      'LivrosApi::update/$1');
+$routes->patch('LivrosApi/(:segment)',    'LivrosApi::update/$1');
+$routes->delete('LivrosApi/(:segment)',   'LivrosApi::delete/$1');
+
+
 //Authentication
 
 $routes->get('auth/sigin', 'Auth::sigin');
