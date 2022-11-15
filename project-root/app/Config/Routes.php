@@ -25,7 +25,7 @@ $routes->set404Override();
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-// $routes->setAutoRoute(false);
+//$routes->setAutoRoute(false);
 
 /*
  * --------------------------------------------------------------------
@@ -35,8 +35,54 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
 
+$routes->get('/', 'Home::index');
+$routes->get('/livros', 'Livros::index');
+$routes->post('/salva-contato', 'Mensagens::salvar');
+
+$routes->get('LivrosApi/new',             'LivrosApi::new');
+$routes->post('LivrosApi',                'LivrosApi::create');
+$routes->get('LivrosApi',                 'LivrosApi::index');
+$routes->get('LivrosApi/(:segment)',      'LivrosApi::show/$1');
+$routes->get('LivrosApi/(:segment)/edit', 'LivrosApi::edit/$1');
+$routes->put('LivrosApi/(:segment)',      'LivrosApi::update/$1');
+$routes->patch('LivrosApi/(:segment)',    'LivrosApi::update/$1');
+$routes->delete('LivrosApi/(:segment)',   'LivrosApi::delete/$1');
+
+
+//Authentication
+
+$routes->get('auth/sigin', 'Auth::sigin');
+$routes->get('auth/registration', 'Auth::registration');
+$routes->get('auth/recover-password', 'Auth::recoverPassword');
+$routes->post('auth/save-registration', 'Auth::saveRegistration');
+$routes->post('auth/login', 'Auth::login');
+$routes->get('auth/logout', 'Auth::logout');
+$routes->post('auth/reset-password', 'Auth::resetPassword');
+
+//Email
+$routes->get("send-mail", "Email::sendMail");
+
+//Logged in area
+
+$routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
+    //Dashboard
+    $routes->get('dashboard', 'Dash::index');
+    $routes->get('dashboard/livros', 'Dash::livros');
+    $routes->get('dashboard/contatos', 'Dash::contatos');
+
+    //Users
+    $routes->post('user/update', 'User::updateProfile');
+    $routes->post('user/update-password', 'User::updatePassword');
+
+    //Livros
+    $routes->post('livros/salvar', 'Livros::salvar');
+    $routes->post('livros/excluir', 'Livros::excluir');
+
+    //Mensagens
+    $routes->post('mensagens/excluir', 'Mensagens::excluir');
+    $routes->post('mensagens/marcar-respondido', 'Mensagens::marcarRespondida');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing
