@@ -7,10 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white" aria-current="page" href="<?= base_url('dashboard/livros'); ?>">Livros</a>
+          <a class="nav-link text-white" aria-current="page" href="<?= base_url('dashboard/livros'); ?>">Meus livros</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="<?= base_url('dashboard/contatos'); ?>">Contatos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="<?= base_url('livros'); ?>">Todos os livros</a>
         </li>
       </ul>
       <ul class="navbar-nav">
