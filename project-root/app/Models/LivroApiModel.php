@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class LivroModel extends Model
+class LivroApiModel extends Model
 {
 
   protected $table = 'livros';
@@ -51,3 +51,4 @@ class LivroModel extends Model
     return $resultado;
   }
 }
+

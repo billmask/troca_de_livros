@@ -93,7 +93,7 @@ class Dash extends BaseController
 
     return view('templates/page/header', $data)
       . view('templates/dash/header', $data)
-      . view('templates/dash/secondary-header', $data)
+      . view('templates/external/secondary-header', $data)
       . view($page)
       . view('templates/page/footer', $data);
   }

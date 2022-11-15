@@ -1,4 +1,4 @@
-# Troca Troca de Livros
+# Troca de Livros
 
 Um web app para auxiliar alunos a trocarem livros entre si.
 

@@ -64,6 +64,14 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12 mb-2">
+                                            <label for="name">Tipo<span class="text-danger">*</span></label>
+                                            <select class="form-select" name="tipo">
+                                                <option value="Gibi">Gibi</option>
+                                                <option value="Livro" selected>Livro</option>
+                                                <option value="Revista">Revista</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-12 mb-2">
                                             <label for="ano">Estado do livro<span class="text-danger">*</span></label>
                                             <select class="form-select" name="estado">
                                                 <option value=1>Novo</option>
