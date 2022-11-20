@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white" aria-current="page" href="<?= base_url('livros'); ?>">Livros</a>
+          <a class="nav-link text-white" aria-current="page" href="<?= base_url('livros'); ?>" accesskey="1">Livros</a>
         </li>
       </ul>
     </div>
