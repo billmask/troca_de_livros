@@ -22,7 +22,7 @@
                 <li class="list-group-item list-group-item-action flex-column align-items-start p-3 item-animal">
                     <div class="d-flex">
                         <div class="img-animal col-2 d-flex  justify-content-center">
-                            <img src="<?= $livro['url_img']; ?>" alt="<?= $livro['nome']; ?>" class="img-fluid" style="border-radius: 10px; max-height: 150px;">
+                            <img src="<?= $livro['url_img']; ?>" alt="Livro <?= $livro['nome']; ?>" class="img-fluid" style="border-radius: 10px; max-height: 150px;">
                         </div>
                         <div class="dados-animal col-10 d-flex align-items-center">
                             <div class="conteudo col-12 p-3">
