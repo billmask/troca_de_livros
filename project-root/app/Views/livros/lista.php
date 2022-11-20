@@ -26,7 +26,7 @@
                         <div class="dados-animal col-10 d-flex align-items-center">
                             <div class="conteudo col-12 p-3">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1"><?= $livro['nome']; ?> - <?= $livro['edicao']; ?>° edição</h5>
+                                    <p class="mb-1"><?= $livro['nome']; ?> - <?= $livro['edicao']; ?>° edição</p>
                                     <small class="badge bg-dark text-white"><?= $livro['ano']; ?></small>
                                 </div>
                                 <div class="d-flex w-100 justify-content-between pt-2">
@@ -62,7 +62,7 @@
                 <form class="" action="<?= base_url('salva-contato'); ?>" method="POST">
                     <?= csrf_field(); ?>
                     <div class="modal-header">
-                        <h5 class="modal-title" id="livroLabel-<?= $livro['id']; ?>">Interesse no livro <?= $livro['nome']; ?></h5>
+                        <p class="modal-title" id="livroLabel-<?= $livro['id']; ?>">Interesse no livro <?= $livro['nome']; ?></p>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
