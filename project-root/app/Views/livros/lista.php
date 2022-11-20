@@ -29,7 +29,7 @@
                                 <div class="conteudo col-12 p-3">
                                     <div class="d-flex w-100 justify-content-between">
                                         <h2 class="mb-1">
-                                            <caption><?= $livro['nome']; ?> - <?= $livro['edicao']; ?>° edição</caption>
+                                            <?= $livro['nome']; ?> - <?= $livro['edicao']; ?>° edição
                                         </h2>
                                         <small class="badge bg-dark text-white"><?= $livro['ano']; ?></small>
                                     </div>
