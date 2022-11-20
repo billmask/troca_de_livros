@@ -17,6 +17,9 @@
         } else {
         ?>
             <?php if (isset($_GET['buscar'])) echo "<h3>Pesquisa para <strong>" . $_GET['buscar'] . "</strong></h3>"; ?>
+            <a href="/livros">
+                <h1>Livros</h1>
+            </a>
             <?php foreach ($livros as $livro) { ?>
                 <li class="list-group-item list-group-item-action flex-column align-items-start p-3 item-animal">
                     <div class="d-flex">
@@ -26,7 +29,7 @@
                         <div class="dados-animal col-10 d-flex align-items-center">
                             <div class="conteudo col-12 p-3">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <p class="mb-1"><strong><?= $livro['nome']; ?> - <?= $livro['edicao']; ?>° edição</strong></p>
+                                    <h2 class="mb-1"><?= $livro['nome']; ?> - <?= $livro['edicao']; ?>° edição</h2>
                                     <small class="badge bg-dark text-white"><?= $livro['ano']; ?></small>
                                 </div>
                                 <div class="d-flex w-100 justify-content-between pt-2">
