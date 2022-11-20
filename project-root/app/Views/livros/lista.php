@@ -10,7 +10,7 @@
         <div class='alert alert-success'><?= session()->getFlashdata('success'); ?></div>
     <?php endif ?>
     <!-- Fim de mensagens de erro -->
-    <h1><a href="http://#livros"></a> Livros</h1>
+    <h1><a href="#livros">Livros</a></h1>
     <main id="livros">
         <ul class="list-group lista-livros">
             <?php
