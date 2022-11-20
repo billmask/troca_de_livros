@@ -1,17 +1,18 @@
 <!-- Conteudo visível relevante vai dentro da main -->
 
-<section class="listagem-section p-3">
-    <!-- Mensagens de erro -->
-    <?php if (!empty(session()->getFlashdata('fail'))) : ?>
-        <div class='alert alert-danger'><?= session()->getFlashdata('fail'); ?></div>
-    <?php endif ?>
 
-    <?php if (!empty(session()->getFlashdata('success'))) : ?>
-        <div class='alert alert-success'><?= session()->getFlashdata('success'); ?></div>
-    <?php endif ?>
-    <!-- Fim de mensagens de erro -->
-    <h1><a href="#livros">Livros</a></h1>
-    <main id="livros">
+<h1><a href="#livros">Livros</a></h1>
+<main id="livros">
+    <section class="listagem-section p-3">
+        <!-- Mensagens de erro -->
+        <?php if (!empty(session()->getFlashdata('fail'))) : ?>
+            <div class='alert alert-danger'><?= session()->getFlashdata('fail'); ?></div>
+        <?php endif ?>
+
+        <?php if (!empty(session()->getFlashdata('success'))) : ?>
+            <div class='alert alert-success'><?= session()->getFlashdata('success'); ?></div>
+        <?php endif ?>
+        <!-- Fim de mensagens de erro -->
         <ul class="list-group lista-livros">
             <?php
             if (!$livros) {
@@ -54,8 +55,8 @@
             <?php }
             } ?>
         </ul>
-    </main>
-</section>
+    </section>
+</main>
 
 <!-- Conteudo visível relevante vai dentro da main -->
 
@@ -74,19 +75,19 @@
                         <p>Entre em contato com <strong><?= $livro['nome_usuario']; ?></strong></p>
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="nome" name="nome" aria-describedby="Nome" required>
+                            <input type="text" class="form-control" name="nome" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" id="email" name="email" aria-describedby="email" required>
+                            <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="telefone" class="form-label">Telefone<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="telefone" name="telefone" aria-describedby="telefone" required>
+                            <input type="text" class="form-control" name="telefone" required>
                         </div>
                         <div class="mb-3">
                             <label for="mensagem" class="form-label">Dúvidas ou observações</label>
-                            <textarea class="form-control" aria-label="mensagem" id="mensagem" name="mensagem" maxlength="255"></textarea>
+                            <textarea class="form-control" aria-label="mensagem" name="mensagem" maxlength="255"></textarea>
                         </div>
                         <div class="mb-3">
                             <input type="hidden" name="id_usuario" value="<?= $livro['id_usuario']; ?>">
