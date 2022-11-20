@@ -74,19 +74,19 @@
                     <div class="modal-body">
                         <p>Entre em contato com <strong><?= $livro['nome_usuario']; ?></strong></p>
                         <div class="mb-3">
-                            <label for="nome" class="form-label">Nome<span class="text-danger">*</span></label>
+                            <label class="form-label">Nome<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" name="nome" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                            <label class="form-label">Email<span class="text-danger">*</span></label>
                             <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="telefone" class="form-label">Telefone<span class="text-danger">*</span></label>
+                            <label class="form-label">Telefone<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" name="telefone" required>
                         </div>
                         <div class="mb-3">
-                            <label for="mensagem" class="form-label">Dúvidas ou observações</label>
+                            <label class="form-label">Dúvidas ou observações</label>
                             <textarea class="form-control" aria-label="mensagem" name="mensagem" maxlength="255"></textarea>
                         </div>
                         <div class="mb-3">
