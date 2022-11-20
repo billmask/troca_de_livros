@@ -26,7 +26,7 @@
                         <div class="dados-animal col-10 d-flex align-items-center">
                             <div class="conteudo col-12 p-3">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <p class="mb-1"><?= $livro['nome']; ?> - <?= $livro['edicao']; ?>° edição</p>
+                                    <p class="mb-1"><strong><?= $livro['nome']; ?> - <?= $livro['edicao']; ?>° edição</strong></p>
                                     <small class="badge bg-dark text-white"><?= $livro['ano']; ?></small>
                                 </div>
                                 <div class="d-flex w-100 justify-content-between pt-2">
