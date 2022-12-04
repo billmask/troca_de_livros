@@ -10,5 +10,5 @@
     <h1 class="text-center">Encontre um livro que você precisa</h1>
     <div class="separador m-3"></div>
     <p class="text-center">Veja aqui os livros disponíveis para doação.</p>
-    <p class="d-flex justify-content-center"><a href="<?= base_url('livros'); ?>" class="nav-link btn btn-warning text-white col-4">Encontrar um livro</a></p>
+    <p class="d-flex justify-content-center"><a href="<?= base_url('livros'); ?>" class="nav-link btn btn-primary text-white col-4">Encontrar um livro</a></p>
 </div>
