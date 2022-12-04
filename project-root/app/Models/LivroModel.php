@@ -22,7 +22,10 @@ class LivroModel extends Model
   public function getLivrosDisponiveis()
   {
     $db = db_connect();
-    $sql = 'SELECT l.*, u.nome as nome_usuario, u.cidade, u.estado, u.id as id_usuario FROM livros l INNER JOIN usuarios u ON u.id = l.id_usuario';
+    $sql = 'SELECT l.*, u.nome as nome_usuario, u.cidade, u.estado, u.id as id_usuario 
+    FROM livros l 
+    INNER JOIN usuarios u ON u.id = l.id_usuario
+    ORDER BY 1';
     $resultado = $db->query($sql);
     return $resultado->getResultArray();
   }
@@ -30,7 +33,11 @@ class LivroModel extends Model
   public function search($search)
   {
     $db = db_connect();
-    $sql = "SELECT l.*, u.nome as nome_usuario, u.cidade, u.estado, u.id as id_usuario FROM livros l INNER JOIN usuarios u ON u.id = l.id_usuario WHERE l.nome LIKE CONCAT('$search', '%')";
+    $sql = "SELECT l.*, u.nome as nome_usuario, u.cidade, u.estado, u.id as id_usuario 
+    FROM livros l 
+    INNER JOIN usuarios u ON u.id = l.id_usuario 
+    WHERE l.nome LIKE CONCAT('%','$search', '%')
+    ORDER BY 2";
     $resultado = $db->query($sql);
     return $resultado->getResultArray();
   }
@@ -38,7 +45,9 @@ class LivroModel extends Model
   public function getLivrosPorIdUsuario($id)
   {
     $db = db_connect();
-    $sql = 'SELECT * FROM livros WHERE id_usuario = ' . $id;
+    $sql = 'SELECT * 
+    FROM livros 
+    WHERE id_usuario = ' . $id;
     $resultado = $db->query($sql);
     return $resultado->getResultArray();
   }
@@ -46,7 +55,9 @@ class LivroModel extends Model
   public function excluir($id)
   {
     $db = db_connect();
-    $sql = 'DELETE FROM livros WHERE id = ' . $id;
+    $sql = 'DELETE 
+    FROM livros 
+    WHERE id = ' . $id;
     $resultado = $db->query($sql);
     return $resultado;
   }
